@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "5 0 * * *"
+    - cron: "1 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -47,8 +47,8 @@ jobs:
     # Commit all changed files to the repository
     - name: Commit to the repo
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        git config --global user.name "befaci03/github-stats"
+        git config --global user.email "github[bot]@befaci.befacivm.us.to"
         git add .
         # Force the build to succeed, even if no files were changed
         git commit -m 'Update generated files' || true
